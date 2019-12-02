@@ -7,7 +7,10 @@ import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
-
+/* Paginas */
+import Noticias from "../Pages/Noticias";
+import Agenda from "../Pages/Agenda";
+import MinhasTarefas from "../Pages/MinhasTarefas";
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
@@ -70,8 +73,8 @@ const FullWidthTabs = () => {
           aria-label="Tabs "
         >
           <Tab label="Home" {...a11yProps(0)} />
-          <Tab label="Intranet" {...a11yProps(1)} />
-          <Tab label="Asana" {...a11yProps(2)} />
+          <Tab label="Minhas Tarefas " {...a11yProps(1)} />
+          <Tab label="Noticias" {...a11yProps(2)} />
           <Tab label="Agenda" {...a11yProps(3)} />
         </Tabs>
       </AppBar>
@@ -84,13 +87,13 @@ const FullWidthTabs = () => {
           Home
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-          Intranet
+          <MinhasTarefas />
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Asana
+          <Noticias />
         </TabPanel>
         <TabPanel value={value} index={3} dir={theme.direction}>
-          Asana
+          <Agenda />
         </TabPanel>
       </SwipeableViews>
     </Box>
